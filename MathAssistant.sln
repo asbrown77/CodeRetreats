@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathAssistant.Core", "MathAssistant.Core\MathAssistant.Core.csproj", "{01A3866F-3041-4AF1-A295-188581CCF21A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathAssistant.AcceptanceTests", "MathAssistant.AcceptanceTests\MathAssistant.AcceptanceTests.csproj", "{FCD2EC78-946C-4C48-9CC6-A5A9AA14FB13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathAssistant.UnitTests", "MathAssistant.UnitTests\MathAssistant.UnitTests.csproj", "{6592998F-F29D-44F1-AFA9-2F285133E2DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathAssistant.Console", "MathAssistant.Console\MathAssistant.Console.csproj", "{D988C3CE-BFF5-4DAB-9413-12E8036B7025}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01A3866F-3041-4AF1-A295-188581CCF21A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A3866F-3041-4AF1-A295-188581CCF21A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A3866F-3041-4AF1-A295-188581CCF21A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A3866F-3041-4AF1-A295-188581CCF21A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD2EC78-946C-4C48-9CC6-A5A9AA14FB13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD2EC78-946C-4C48-9CC6-A5A9AA14FB13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD2EC78-946C-4C48-9CC6-A5A9AA14FB13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD2EC78-946C-4C48-9CC6-A5A9AA14FB13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6592998F-F29D-44F1-AFA9-2F285133E2DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6592998F-F29D-44F1-AFA9-2F285133E2DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6592998F-F29D-44F1-AFA9-2F285133E2DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6592998F-F29D-44F1-AFA9-2F285133E2DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D988C3CE-BFF5-4DAB-9413-12E8036B7025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D988C3CE-BFF5-4DAB-9413-12E8036B7025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D988C3CE-BFF5-4DAB-9413-12E8036B7025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D988C3CE-BFF5-4DAB-9413-12E8036B7025}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

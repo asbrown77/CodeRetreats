@@ -1,0 +1,41 @@
+***** MathAssistant.AcceptanceTests.Features.FizzBuzzTransformationFeature.InputSequenceNumberGreaterThan0("1","1",null)
+Given I prompted to enter the total number of sequence numbers
+-> done: FizzBuzzTransformationSteps.GivenIPromptedToEnterTheTotalNumberOfSequenceNumbers() (0.0s)
+When I have entered in "1"
+-> done: FizzBuzzTransformationSteps.WhenIHaveEnteredIn("1") (0.0s)
+Then I should display "1"
+-> done: FizzBuzzTransformationSteps.ThenIShouldDisplay("1") (0.0s)
+And I should prompted to enter another sequence number
+-> done: FizzBuzzTransformationSteps.ThenIShouldPromptedToEnterAnotherSequenceNumber() (0.0s)
+***** MathAssistant.AcceptanceTests.Features.FizzBuzzTransformationFeature.InputSequenceNumberGreaterThan0("15","1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz",null)
+Given I prompted to enter the total number of sequence numbers
+-> done: FizzBuzzTransformationSteps.GivenIPromptedToEnterTheTotalNumberOfSequenceNumbers() (0.0s)
+When I have entered in "15"
+-> done: FizzBuzzTransformationSteps.WhenIHaveEnteredIn("15") (0.0s)
+Then I should display "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz"
+-> done: FizzBuzzTransformationSteps.ThenIShouldDisplay("1,2,Fizz,4,Buzz,F...") (0.0s)
+And I should prompted to enter another sequence number
+-> done: FizzBuzzTransformationSteps.ThenIShouldPromptedToEnterAnotherSequenceNumber() (0.0s)
+***** MathAssistant.AcceptanceTests.Features.FizzBuzzTransformationFeature.InputSequenceNumberGreaterThan0("5","1,2,Fizz,4,Buzz",null)
+Given I prompted to enter the total number of sequence numbers
+-> done: FizzBuzzTransformationSteps.GivenIPromptedToEnterTheTotalNumberOfSequenceNumbers() (0.0s)
+When I have entered in "5"
+-> done: FizzBuzzTransformationSteps.WhenIHaveEnteredIn("5") (0.0s)
+Then I should display "1,2,Fizz,4,Buzz"
+-> done: FizzBuzzTransformationSteps.ThenIShouldDisplay("1,2,Fizz,4,Buzz") (0.0s)
+And I should prompted to enter another sequence number
+-> done: FizzBuzzTransformationSteps.ThenIShouldPromptedToEnterAnotherSequenceNumber() (0.0s)
+***** MathAssistant.AcceptanceTests.Features.FizzBuzzTransformationFeature.QuitApplicationOnEmptyInputOrZero("",null)
+Given I prompted to enter the total number of sequence numbers
+-> done: FizzBuzzTransformationSteps.GivenIPromptedToEnterTheTotalNumberOfSequenceNumbers() (0.0s)
+When I have entered in ""
+-> done: FizzBuzzTransformationSteps.WhenIHaveEnteredIn("") (0.0s)
+Then should exit application
+-> done: FizzBuzzTransformationSteps.ThenShouldExitApplication() (0.0s)
+***** MathAssistant.AcceptanceTests.Features.FizzBuzzTransformationFeature.QuitApplicationOnEmptyInputOrZero("0",null)
+Given I prompted to enter the total number of sequence numbers
+-> done: FizzBuzzTransformationSteps.GivenIPromptedToEnterTheTotalNumberOfSequenceNumbers() (0.0s)
+When I have entered in "0"
+-> done: FizzBuzzTransformationSteps.WhenIHaveEnteredIn("0") (0.0s)
+Then should exit application
+-> done: FizzBuzzTransformationSteps.ThenShouldExitApplication() (0.0s)

@@ -1,0 +1,16 @@
+C:\Development\Barclays\MathAssistant\MathAssistant.Console\bin\Debug\MathAssistant.Console.exe.config
+C:\Development\Barclays\MathAssistant\MathAssistant.Console\bin\Debug\MathAssistant.Console.exe
+C:\Development\Barclays\MathAssistant\MathAssistant.Console\bin\Debug\MathAssistant.Console.pdb
+C:\Development\Barclays\MathAssistant\MathAssistant.Console\bin\Debug\MathAssistant.Core.dll
+C:\Development\Barclays\MathAssistant\MathAssistant.Console\bin\Debug\MathAssistant.Core.pdb
+C:\Development\Barclays\MathAssistant\MathAssistant.Console\obj\Debug\MathAssistant.Console.csprojResolveAssemblyReference.cache
+C:\Development\Barclays\MathAssistant\MathAssistant.Console\obj\Debug\MathAssistant.Console.exe
+C:\Development\Barclays\MathAssistant\MathAssistant.Console\obj\Debug\MathAssistant.Console.pdb
+C:\Development\Barclays\MathAssistant - Template\MathAssistant.Console\bin\Debug\MathAssistant.Console.exe.config
+C:\Development\Barclays\MathAssistant - Template\MathAssistant.Console\obj\Debug\MathAssistant.Console.exe
+C:\Development\Barclays\MathAssistant - Template\MathAssistant.Console\obj\Debug\MathAssistant.Console.pdb
+C:\Development\Barclays\MathAssistant - Template\MathAssistant.Console\bin\Debug\MathAssistant.Console.exe
+C:\Development\Barclays\MathAssistant - Template\MathAssistant.Console\bin\Debug\MathAssistant.Console.pdb
+C:\Development\Barclays\MathAssistant - Template\MathAssistant.Console\bin\Debug\MathAssistant.Core.dll
+C:\Development\Barclays\MathAssistant - Template\MathAssistant.Console\bin\Debug\MathAssistant.Core.pdb
+C:\Development\Barclays\MathAssistant - Template\MathAssistant.Console\obj\Debug\MathAssistant.Console.csprojResolveAssemblyReference.cache
