@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathAssistant.UnitTests", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathAssistant.Console", "MathAssistant.Console\MathAssistant.Console.csproj", "{D988C3CE-BFF5-4DAB-9413-12E8036B7025}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{F716235B-B728-48F2-B2AD-18543A8755A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{A377211B-B445-4586-A4DA-3792AD9BC877}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,5 +38,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D988C3CE-BFF5-4DAB-9413-12E8036B7025} = {F716235B-B728-48F2-B2AD-18543A8755A9}
+		{01A3866F-3041-4AF1-A295-188581CCF21A} = {F716235B-B728-48F2-B2AD-18543A8755A9}
+		{FCD2EC78-946C-4C48-9CC6-A5A9AA14FB13} = {A377211B-B445-4586-A4DA-3792AD9BC877}
+		{6592998F-F29D-44F1-AFA9-2F285133E2DE} = {A377211B-B445-4586-A4DA-3792AD9BC877}
 	EndGlobalSection
 EndGlobal
