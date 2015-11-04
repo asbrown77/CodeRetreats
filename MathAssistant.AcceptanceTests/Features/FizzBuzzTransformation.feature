@@ -5,9 +5,6 @@ Feature: Fizz Buzz Transformation
 	"Fizz" and any number divisible by 5 use "Buzz", 
 	so that I can avoid embarrassment in front of the whole class.
 
-Background: 
-	Given I have Transformation Rule of "FizzBuzz"
-
 Scenario Outline: Quit Application on empty input or zero
 	Given I prompted to enter the total number of sequence numbers
 	When I have entered in "<input>"
