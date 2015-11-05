@@ -15,12 +15,16 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
             console.Stub(x => x.ReadLine()).Return(inputValue).Repeat.Once();
         }
 
+        [BeforeScenario]
+        public void BeforeScenario()
+        {
+            console = MockRepository.GenerateMock<IConsole>();     
+        }
+
         [Given(@"I prompted to enter the total number of sequence numbers")]
         public void GivenIPromptedToEnterTheTotalNumberOfSequenceNumbers()
         {
-            console = MockRepository.GenerateMock<IConsole>();
             var mathAssistantApplication = new MathAssistantApplication(console);
-
             mathAssistantApplication.Start();
         }
         
