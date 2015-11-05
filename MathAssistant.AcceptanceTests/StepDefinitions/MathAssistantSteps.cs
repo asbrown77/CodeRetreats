@@ -1,4 +1,5 @@
 ﻿using System;
+using MathAssistant.Core;
 using Rhino.Mocks;
 using TechTalk.SpecFlow;
 
