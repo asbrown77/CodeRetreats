@@ -43,5 +43,11 @@ namespace MathAssistant.UnitTests
             VerifyOutput("Exit");
         }
 
+        [Test]
+        public void EnterInput_WhenStartedAndNonNumericValue_ShouldDisplayNeedToEnterNumber()
+        {
+            application.Start();
+            VerifyOutput("Need to Enter Number");
+        }
     }
 }
