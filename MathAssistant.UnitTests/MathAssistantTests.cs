@@ -8,7 +8,7 @@ namespace MathAssistant.UnitTests
     public class MathAssistantTests
     {
         [Test]
-        public void WhenStart__ShouldBePromptedToEnterSequenceNumber()
+        public void WhenStart_ShouldBePromptedToEnterSequenceNumber()
         {
             var console = MockRepository.GenerateMock<IConsole>();
             var application = new MathAssistantApplication(console);
