@@ -37,7 +37,7 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
         [Then(@"should exit application")]
         public void ThenShouldExitApplication()
         {
-            ScenarioContext.Current.Pending();
+            console.AssertWasCalled(x => x.WriteLine("Exit"));
         }
     }
 }
