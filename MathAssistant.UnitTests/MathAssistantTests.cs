@@ -10,6 +10,11 @@ namespace MathAssistant.UnitTests
         private IConsole console;
         private MathAssistantApplication application;
 
+        private void VerifyOutput(string value)
+        {
+            console.AssertWasCalled(x => x.WriteLine(value), option => option.Repeat.Once());
+        }
+
         [SetUp]
         public void Setup()
         {
@@ -21,7 +26,7 @@ namespace MathAssistant.UnitTests
         public void WhenStart_ShouldBePromptedToEnterSequenceNumber()
         {
             application.Start();
-            console.AssertWasCalled(x => x.WriteLine("Enter Sequence Number:"), option => option.Repeat.Once());
+            VerifyOutput("Enter Sequence Number:");
         }
 
         [Test]
@@ -34,8 +39,9 @@ namespace MathAssistant.UnitTests
         [Test]
         public void EnterInput_WhenStartedAndValueIsZero_ShouldExitApplication()
         {
-            application.Start(); 
-            console.AssertWasCalled(x => x.WriteLine("Exit"), option => option.Repeat.Once());
+            application.Start();
+            VerifyOutput("Exit");
         }
+
     }
 }
