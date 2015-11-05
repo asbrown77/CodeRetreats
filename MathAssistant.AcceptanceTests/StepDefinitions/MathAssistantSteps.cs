@@ -44,5 +44,18 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
         {
             VerifyOutput("Exit");
         }
+
+        [Then(@"I should display ""(.*)""")]
+        public void ThenIShouldDisplay(string value)
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"I should prompted to enter another sequence number")]
+        public void ThenIShouldPromptedToEnterAnotherSequenceNumber()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
     }
 }
