@@ -15,6 +15,11 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
             console.Stub(x => x.ReadLine()).Return(inputValue).Repeat.Once();
         }
 
+        private void VerifyOutput(string value)
+        {
+            console.AssertWasCalled(x => x.WriteLine(value));
+        }
+
         [BeforeScenario]
         public void BeforeScenario()
         {
@@ -37,7 +42,7 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
         [Then(@"should exit application")]
         public void ThenShouldExitApplication()
         {
-            console.AssertWasCalled(x => x.WriteLine("Exit"));
+            VerifyOutput("Exit");
         }
     }
 }
