@@ -12,6 +12,7 @@ namespace MathAssistant.Core
         public void Start()
         {
             console.WriteLine("Enter Sequence Number:");
+            console.ReadLine();
         }
     }
 }
