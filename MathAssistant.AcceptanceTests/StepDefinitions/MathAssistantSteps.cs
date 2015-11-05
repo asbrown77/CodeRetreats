@@ -6,9 +6,14 @@ using TechTalk.SpecFlow;
 namespace MathAssistant.AcceptanceTests.StepDefinitions
 {
     [Binding]
-    public class FizzBuzzTransformationSteps
+    public class MathAssistantSteps
     {
         private IConsole console;
+
+        private void EnterInputValue(string inputValue)
+        {
+            console.Stub(x => x.ReadLine()).Return(inputValue).Repeat.Once();
+        }
 
         [Given(@"I prompted to enter the total number of sequence numbers")]
         public void GivenIPromptedToEnterTheTotalNumberOfSequenceNumbers()
@@ -22,9 +27,9 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
         [When(@"I have entered in ""(.*)""")]
         public void WhenIHaveEnteredIn(string inputValue)
         {
-            console.Stub(x => x.ReadLine()).Return(inputValue).Repeat.Once();
+            EnterInputValue(inputValue);
         }
-        
+
         [Then(@"should exit application")]
         public void ThenShouldExitApplication()
         {
