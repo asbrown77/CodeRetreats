@@ -39,11 +39,11 @@ namespace MathAssistant.UnitTests
         //EnterInput_WhenStartedAndExitInputValueEntered_DontRequestForAnotherSeqenceNumber
 
         [TestCase(0)]
-        [TestCase(1)]
+        [TestCase("")]
         public void EnterInput_WhenStartedAndHasInputValue_ShouldExitApplication(string inputValue)
         {
-            application.Start();
             console.Stub(x => x.ReadLine()).Return(inputValue).Repeat.Once();
+            application.Start();
             VerifyOutput("Exit");
         }
     }
