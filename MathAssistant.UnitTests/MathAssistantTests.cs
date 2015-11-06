@@ -37,9 +37,9 @@ namespace MathAssistant.UnitTests
         }
 
         [Test]
-        public void EnterInput_WhenStartedAndZeroInputValue_ShouldExitApplication(string inputValue)
+        public void EnterInput_WhenStartedAndZeroInputValue_ShouldExitApplication()
         {
-            console.Stub(x => x.ReadLine()).Return(inputValue).Repeat.Once();
+            console.Stub(x => x.ReadLine()).Return("0").Repeat.Once();
             application.Start();
             VerifyOutput("Exit");
         } 
