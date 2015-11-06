@@ -36,9 +36,8 @@ namespace MathAssistant.UnitTests
             console.AssertWasCalled(x => x.ReadLine(), options => options.Repeat.Once());
         }
 
-        [TestCase(0)]
-        [TestCase("")]
-        public void EnterInput_WhenStartedAndHasInputValue_ShouldExitApplication(string inputValue)
+        [Test]
+        public void EnterInput_WhenStartedAndZeroInputValue_ShouldExitApplication(string inputValue)
         {
             console.Stub(x => x.ReadLine()).Return(inputValue).Repeat.Once();
             application.Start();
