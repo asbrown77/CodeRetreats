@@ -38,13 +38,12 @@ namespace MathAssistant.UnitTests
 
         //EnterInput_WhenStartedAndExitInputValueEntered_DontRequestForAnotherSeqenceNumber
 
-        [Test]
-        public void EnterInput_WhenStartedAndValueIsZero_ShouldExitApplication()
+        [TestCase(0)]
+        public void EnterInput_WhenStartedAndHasInputValue_ShouldExitApplication(string inputValue)
         {
             application.Start();
-            console.Stub(x => x.ReadLine()).Return("0").Repeat.Once();
+            console.Stub(x => x.ReadLine()).Return(inputValue).Repeat.Once();
             VerifyOutput("Exit");
         }
-
     }
 }
