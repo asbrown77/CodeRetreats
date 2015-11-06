@@ -36,18 +36,15 @@ namespace MathAssistant.UnitTests
             console.AssertWasCalled(x => x.ReadLine(), options => options.Repeat.Once());
         }
 
+        //EnterInput_WhenStartedAndExitInputValueEntered_DontRequestForAnotherSeqenceNumber
+
         [Test]
         public void EnterInput_WhenStartedAndValueIsZero_ShouldExitApplication()
         {
             application.Start();
+            console.Stub(x => x.ReadLine()).Return("0").Repeat.Once();
             VerifyOutput("Exit");
         }
 
-        [Test]
-        public void EnterInput_WhenStartedAndNonNumericValue_ShouldDisplayNeedToEnterNumber()
-        {
-            application.Start();
-            VerifyOutput("Need to Enter Number");
-        }
     }
 }
