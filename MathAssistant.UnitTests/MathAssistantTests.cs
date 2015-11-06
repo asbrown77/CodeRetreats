@@ -39,6 +39,7 @@ namespace MathAssistant.UnitTests
         //EnterInput_WhenStartedAndExitInputValueEntered_DontRequestForAnotherSeqenceNumber
 
         [TestCase(0)]
+        [TestCase(1)]
         public void EnterInput_WhenStartedAndHasInputValue_ShouldExitApplication(string inputValue)
         {
             application.Start();
