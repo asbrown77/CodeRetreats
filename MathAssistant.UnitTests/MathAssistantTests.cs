@@ -22,6 +22,11 @@ namespace MathAssistant.UnitTests
             application = new MathAssistantApplication(console);
         }
 
+        private void MockEnteringInputValue(string inputValue)
+        {
+            console.Stub(x => x.ReadLine()).Return(inputValue).Repeat.Once();
+        }
+
         [Test]
         public void WhenStart_ShouldBePromptedToEnterSequenceNumber()
         {
@@ -40,9 +45,9 @@ namespace MathAssistant.UnitTests
         [TestCase("")]
         public void EnterInput_WhenStartedAndExitValue_ShouldExitApplication(string inputValue)
         {
-            console.Stub(x => x.ReadLine()).Return(inputValue).Repeat.Once();
+            MockEnteringInputValue(inputValue);
             application.Start();
             VerifyOutput("Exit");
-        } 
+        }
     }
 }
