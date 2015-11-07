@@ -12,7 +12,12 @@ namespace MathAssistant.Core
         public void Start()
         {
             console.WriteLine("Enter Sequence Number:");
-            console.ReadLine();
+            var input = console.ReadLine();
+
+            if (input == "x")
+            {
+                console.WriteLine("Need to enter numeric value!");
+            }
 
             console.WriteLine("Exit");
         }
