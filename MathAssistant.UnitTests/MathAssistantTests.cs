@@ -49,5 +49,13 @@ namespace MathAssistant.UnitTests
             application.Start();
             VerifyOutput("Exit");
         }
+
+        [Test]
+        public void EnterInput_WhenStartedAndInvalidValue_DisplayThatNumericValueIsExpected()
+        {
+            MockEnteringInputValue("x");
+            application.Start();
+            VerifyOutput("Need to enter numeric value!");
+        }
     }
 }
