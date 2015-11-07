@@ -14,16 +14,23 @@ namespace MathAssistant.Core
         {
             PromptForSequenceNumber();
 
+            DisplayOutput(TransformInputSequenceNumberToStringFormat());
+
+            ShuttingDown();
+        }
+
+        private string TransformInputSequenceNumberToStringFormat()
+        {
+            var transformString = "";
             if (InputIsNumericValue())
             {
-                DisplayOutput(lastInput);
+                transformString = lastInput;
             }
             else
             {
-                DisplayOutput("Need to enter numeric value!");
+                transformString = "Need to enter numeric value!";
             }
-
-            ShuttingDown();
+            return transformString;
         }
 
         private void PromptForSequenceNumber()
