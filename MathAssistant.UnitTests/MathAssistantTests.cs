@@ -10,9 +10,9 @@ namespace MathAssistant.UnitTests
         private IConsole console;
         private MathAssistantApplication application;
 
-        private void VerifyOutput(string value)
+        private void VerifyOutput(string value, int numberOfTimes = 1)
         {
-            console.AssertWasCalled(x => x.WriteLine(value), option => option.Repeat.Once());
+            console.AssertWasCalled(x => x.WriteLine(value), option => option.Repeat.Times(numberOfTimes));
         }
 
         [SetUp]
@@ -58,6 +58,7 @@ namespace MathAssistant.UnitTests
             MockEnteringInputValue(inputValue);
             application.Start();
             VerifyOutput(expectedDisplayOutput);
+            VerifyOutput("Enter Sequence Number:", 2);
         }
     }
 }
