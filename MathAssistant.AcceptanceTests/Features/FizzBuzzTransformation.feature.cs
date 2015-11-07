@@ -99,7 +99,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 19
  testRunner.When("I have entered in \"xy\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
- testRunner.Then("I should display \"Need to enter a number!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I should display \"Need to enter numeric value!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 21
  testRunner.And("I should prompted to enter another sequence number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

@@ -17,7 +17,7 @@ Examples:
 Scenario: Input a non numeric value
 	Given I prompted to enter the total number of sequence numbers
 	When I have entered in "xy"
-	Then I should display "Need to enter a number!"
+	Then I should display "Need to enter numeric value!"
 	And I should prompted to enter another sequence number
 
 Scenario Outline: Input sequence number greater than zero

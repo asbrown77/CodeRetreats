@@ -9,15 +9,16 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
     public class MathAssistantSteps
     {
         private IConsole console;
+        private MathAssistantApplication mathAssistantApplication;
 
         private void EnterInputValue(string inputValue)
         {
             console.Stub(x => x.ReadLine()).Return(inputValue).Repeat.Once();
         }
 
-        private void VerifyOutput(string value)
+        private void VerifyOutput(string value, int numberOfTimes = 1)
         {
-            console.AssertWasCalled(x => x.WriteLine(value));
+            console.AssertWasCalled(x => x.WriteLine(value), options => options.Repeat.Times(numberOfTimes));
         }
 
         [BeforeScenario]
@@ -29,14 +30,14 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
         [Given(@"I prompted to enter the total number of sequence numbers")]
         public void GivenIPromptedToEnterTheTotalNumberOfSequenceNumbers()
         {
-            var mathAssistantApplication = new MathAssistantApplication(console);
-            mathAssistantApplication.Start();
+            mathAssistantApplication = new MathAssistantApplication(console);
         }
         
         [When(@"I have entered in ""(.*)""")]
         public void WhenIHaveEnteredIn(string inputValue)
         {
             EnterInputValue(inputValue);
+            mathAssistantApplication.Start();
         }
 
         [Then(@"should exit application")]
@@ -54,7 +55,7 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
         [Then(@"I should prompted to enter another sequence number")]
         public void ThenIShouldPromptedToEnterAnotherSequenceNumber()
         {
-            ScenarioContext.Current.Pending();
+            VerifyOutput("Enter Sequence Number:", 2);
         }
 
     }
