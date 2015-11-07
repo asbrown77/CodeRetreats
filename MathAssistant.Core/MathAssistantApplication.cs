@@ -1,3 +1,5 @@
+using System;
+
 namespace MathAssistant.Core
 {
     public class MathAssistantApplication
@@ -14,7 +16,7 @@ namespace MathAssistant.Core
         {
             PromptForSequenceNumber();
 
-            if (!(lastInput == " " || lastInput == "0"))
+            if (!(String.IsNullOrEmpty(lastInput) || lastInput == "0"))
             {
                 DisplayOutput(TransformInputSequenceNumberToStringFormat());
                 PromptForSequenceNumber();
