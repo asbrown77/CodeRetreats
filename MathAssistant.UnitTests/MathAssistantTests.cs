@@ -52,6 +52,7 @@ namespace MathAssistant.UnitTests
 
         [TestCase("1", "1")]
         [TestCase("x", "Need to enter numeric value!")]
+        [TestCase("xy", "Need to enter numeric value!")]
         public void EnterInput_WhenStartedAndInputValue_DisplayTheExpectedOutput(string inputValue, string expectedDisplayOutput)
          {
             MockEnteringInputValue(inputValue);
