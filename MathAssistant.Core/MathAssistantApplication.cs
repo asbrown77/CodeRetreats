@@ -35,6 +35,7 @@ namespace MathAssistant.Core
             var transformString = "";
             if (InputIsNumericValue())
             {
+                // Add transformation
                 transformString = lastInput;
             }
             else
