@@ -14,7 +14,7 @@ namespace MathAssistant.Core
         {
             PromptForSequenceNumber();
 
-            if (lastInput == "x")
+            if (IsValidNumericValue())
             {
                 DisplayOutput("Need to enter numeric value!");
             }
@@ -23,7 +23,7 @@ namespace MathAssistant.Core
                 DisplayOutput(lastInput);
             }
 
-            DisplayOutput("Exit");
+            ShuttingDown();
         }
 
         private void PromptForSequenceNumber()
@@ -32,9 +32,19 @@ namespace MathAssistant.Core
             lastInput = console.ReadLine();
         }
 
+        private bool IsValidNumericValue()
+        {
+            return lastInput == "x";
+        }
+
         private void DisplayOutput(string value)
         {
             console.WriteLine(value);
+        }
+
+        private void ShuttingDown()
+        {
+            DisplayOutput("Exit");
         }
     }
 }
