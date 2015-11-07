@@ -18,6 +18,10 @@ namespace MathAssistant.Core
             {
                 DisplayOutput("Need to enter numeric value!");
             }
+            else
+            {
+                DisplayOutput(input);
+            }
 
             DisplayOutput("Exit");
         }
