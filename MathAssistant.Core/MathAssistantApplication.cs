@@ -14,7 +14,7 @@ namespace MathAssistant.Core
         {
             PromptForSequenceNumber();
 
-            if (lastInput != "x" || lastInput != "0")
+            if (!(lastInput == " " || lastInput == "0"))
             {
                 DisplayOutput(TransformInputSequenceNumberToStringFormat());
                 PromptForSequenceNumber();
