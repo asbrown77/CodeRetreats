@@ -11,15 +11,20 @@ namespace MathAssistant.Core
 
         public void Start()
         {
-            console.WriteLine("Enter Sequence Number:");
+            DisplayOutput("Enter Sequence Number:");
             var input = console.ReadLine();
 
             if (input == "x")
             {
-                console.WriteLine("Need to enter numeric value!");
+                DisplayOutput("Need to enter numeric value!");
             }
 
-            console.WriteLine("Exit");
+            DisplayOutput("Exit");
+        }
+
+        private void DisplayOutput(string value)
+        {
+            console.WriteLine(value);
         }
     }
 }
