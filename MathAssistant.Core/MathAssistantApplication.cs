@@ -16,13 +16,18 @@ namespace MathAssistant.Core
         {
             PromptForSequenceNumber();
 
-            if (!(String.IsNullOrEmpty(lastInput) || lastInput == "0"))
+            if (!IsExitInputValue())
             {
                 DisplayOutput(TransformInputSequenceNumberToStringFormat());
                 PromptForSequenceNumber();
             }
 
             ShuttingDown();
+        }
+
+        private bool IsExitInputValue()
+        {
+            return (String.IsNullOrEmpty(lastInput) || lastInput == "0");
         }
 
         private string TransformInputSequenceNumberToStringFormat()
