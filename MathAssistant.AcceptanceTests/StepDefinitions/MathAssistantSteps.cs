@@ -48,7 +48,7 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
         [Then(@"I should display ""(.*)""")]
         public void ThenIShouldDisplay(string value)
         {
-            ScenarioContext.Current.Pending();
+            VerifyOutput(value);
         }
 
         [Then(@"I should prompted to enter another sequence number")]
