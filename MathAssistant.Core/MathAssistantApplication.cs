@@ -34,7 +34,8 @@ namespace MathAssistant.Core
 
         private bool InputIsNumericValue()
         {
-            return lastInput != "x";
+            int numericValue;
+            return int.TryParse(lastInput, out numericValue);
         }
 
         private void DisplayOutput(string value)
