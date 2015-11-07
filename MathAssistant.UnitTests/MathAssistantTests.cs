@@ -37,6 +37,7 @@ namespace MathAssistant.UnitTests
         }
 
         [TestCase("0")]
+        [TestCase("1")]
         public void EnterInput_WhenStartedAndExitValue_ShouldExitApplication(string inputValue)
         {
             console.Stub(x => x.ReadLine()).Return(inputValue).Repeat.Once();
