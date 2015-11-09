@@ -39,7 +39,7 @@ namespace MathAssistant.Core
 
         private static bool IsFizz(int number)
         {
-            return number == 3;
+            return number % 3 ==0;
         }
 
         private static string DefaultRule(int number, string returnString)
