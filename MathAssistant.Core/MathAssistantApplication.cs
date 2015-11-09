@@ -35,13 +35,14 @@ namespace MathAssistant.Core
         {
             var transformString = "";
             var sequenceNumber = 0;
+            var numericTransformer = new NumericTransformer();
             if (InputIsNumericValue(out sequenceNumber))
             {
                 if (sequenceNumber > 1)
                 {
                     transformString = "1,";
                 }
-                transformString += lastInput;
+                transformString += numericTransformer.Transform(sequenceNumber);
             }
             else
             {
