@@ -9,9 +9,17 @@ namespace MathAssistant.Core
         {
             var returnString = String.Empty;
 
-            returnString = FizzRule(number, returnString);
-            returnString = BuzzRule(number, returnString);
-            returnString = DefaultRule(number, returnString);
+            var rules = new List<Func<int, string, string>>
+            {
+                FizzRule,
+                BuzzRule,
+                DefaultRule
+            };
+
+            foreach (var rule in rules)
+            {
+                returnString = rule(number, returnString);
+            }
 
             return returnString;
         }
