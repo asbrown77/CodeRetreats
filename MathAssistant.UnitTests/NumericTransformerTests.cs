@@ -20,16 +20,17 @@ namespace MathAssistant.UnitTests
     {
         public string Transform(int number)
         {
-            string returnString;
+            string returnString = number.ToString(); ;
 
-            if (number == 3)
+            if (IsFizz(number))
                 returnString = "Fizz";
-            else
-            {
-                returnString = number.ToString();
-            }
 
             return returnString;
+        }
+
+        private static bool IsFizz(int number)
+        {
+            return number == 3;
         }
     }
 }
