@@ -1,6 +1,6 @@
 ﻿namespace MathAssistant.Core
 {
-    public class NumericTransformer
+    public class NumericTransformer : INumericTransformer
     {
         public string Transform(int number)
         {
