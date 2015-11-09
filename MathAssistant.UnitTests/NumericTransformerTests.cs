@@ -11,6 +11,7 @@ namespace MathAssistant.UnitTests
     public class NumericTransformerTests
     {
         [TestCase(1,"1")]
+        [TestCase(2,"2")]
         public void Transform_WhenOne_ReturnStringOne(int number, string expectedString)
         {
             var transformer = new NumericTransformer();
@@ -23,7 +24,8 @@ namespace MathAssistant.UnitTests
     {
         public string Transform(int number)
         {
-            return "1";
+            var returnString = number.ToString();
+            return returnString;
         }
     }
 }
