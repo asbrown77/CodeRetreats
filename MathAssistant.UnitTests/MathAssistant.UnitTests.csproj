@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DelimiterTransformProcess.cs" />
     <Compile Include="MathAssistantTests.cs" />
     <Compile Include="NumericTransformerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

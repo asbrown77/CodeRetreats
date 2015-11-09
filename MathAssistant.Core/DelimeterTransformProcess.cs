@@ -1,15 +1,15 @@
 namespace MathAssistant.Core
 {
-    public class DelimeterTransforProcess
+    public class DelimeterTransformProcess
     {
         private readonly NumericTransformer numericTransformer;
 
-        public DelimeterTransforProcess(NumericTransformer numericTransformer)
+        public DelimeterTransformProcess(NumericTransformer numericTransformer)
         {
             this.numericTransformer = numericTransformer;
         }
 
-        public string CreateDelimiterTransformString(int sequenceNumber)
+        public string CreateTransformString(int sequenceNumber)
         {
             var transformString = "";
             if (sequenceNumber > 1)
