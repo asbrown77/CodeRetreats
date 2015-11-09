@@ -20,7 +20,15 @@ namespace MathAssistant.UnitTests
     {
         public string Transform(int number)
         {
-            var returnString = number.ToString();
+            string returnString;
+
+            if (number == 3)
+                returnString = "Fizz";
+            else
+            {
+                returnString = number.ToString();
+            }
+
             return returnString;
         }
     }
