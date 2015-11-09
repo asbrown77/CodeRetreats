@@ -10,12 +10,12 @@ namespace MathAssistant.UnitTests
     [TestFixture]
     public class NumericTransformerTests
     {
-        [Test]
-        public void Transform_WhenOne_ReturnStringOne()
+        [TestCase(1,"1")]
+        public void Transform_WhenOne_ReturnStringOne(int number, string expectedString)
         {
             var transformer = new NumericTransformer();
-            var result = transformer.Transform(1);
-            Assert.That(result, Is.EqualTo("1"));
+            var result = transformer.Transform(number);
+            Assert.That(result, Is.EqualTo(expectedString));
         }
     }
 
