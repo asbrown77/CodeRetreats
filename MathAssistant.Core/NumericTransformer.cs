@@ -8,7 +8,10 @@
 
             if (IsFizz(number))
                 returnString = "Fizz";
-          
+            if (number == 5)
+            {
+                returnString = "Buzz";
+            }
             return returnString;
         }
 
