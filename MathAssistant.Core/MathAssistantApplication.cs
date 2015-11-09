@@ -1,6 +1,5 @@
 using System;
 using MathAssistant.Core.Interfaces;
-using MathAssistant.Core.TransformRules;
 
 namespace MathAssistant.Core
 {
@@ -10,11 +9,10 @@ namespace MathAssistant.Core
         private string lastInput;
         private readonly DelimiterTransformProcess delimeterTransforProcess;
 
-        public MathAssistantApplication(IConsole console)
+        public MathAssistantApplication(IConsole console, INumericTransformer numericTransformer)
         {
             this.console = console;
-            var numericTransformer = new NumericTransformer(new FizzBuzzRule());
-            this.delimeterTransforProcess = new DelimiterTransformProcess(numericTransformer);
+            delimeterTransforProcess = new DelimiterTransformProcess(numericTransformer);
         }
 
         public void Start()

@@ -1,5 +1,6 @@
 ﻿using MathAssistant.Core;
 using MathAssistant.Core.Interfaces;
+using MathAssistant.Core.TransformRules;
 using NUnit.Framework;
 using Rhino.Mocks;
 
@@ -20,7 +21,9 @@ namespace MathAssistant.UnitTests
         public void Setup()
         {
             console = MockRepository.GenerateMock<IConsole>();
-            application = new MathAssistantApplication(console);
+
+            var numericTransformer = new NumericTransformer(new FizzBuzzRule());
+            application = new MathAssistantApplication(console, numericTransformer);
         }
 
         private void MockEnteringInputValue(string inputValue)

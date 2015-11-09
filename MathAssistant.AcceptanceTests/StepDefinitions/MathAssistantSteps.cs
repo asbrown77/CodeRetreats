@@ -1,6 +1,7 @@
 ﻿using System;
 using MathAssistant.Core;
 using MathAssistant.Core.Interfaces;
+using MathAssistant.Core.TransformRules;
 using Rhino.Mocks;
 using TechTalk.SpecFlow;
 
@@ -11,6 +12,7 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
     {
         private IConsole console;
         private MathAssistantApplication mathAssistantApplication;
+        private NumericTransformer numericTransformer;
 
         private void EnterInputValue(string inputValue)
         {
@@ -25,13 +27,14 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
         [BeforeScenario]
         public void BeforeScenario()
         {
-            console = MockRepository.GenerateMock<IConsole>();     
+            console = MockRepository.GenerateMock<IConsole>();
+            numericTransformer = new NumericTransformer(new FizzBuzzRule());
         }
 
         [Given(@"I prompted to enter the total number of sequence numbers")]
         public void GivenIPromptedToEnterTheTotalNumberOfSequenceNumbers()
         {
-            mathAssistantApplication = new MathAssistantApplication(console);
+            mathAssistantApplication = new MathAssistantApplication(console, numericTransformer);
         }
         
         [When(@"I have entered in ""(.*)""")]
