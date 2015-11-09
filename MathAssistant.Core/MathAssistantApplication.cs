@@ -35,20 +35,18 @@ namespace MathAssistant.Core
 
         private string TransformInputSequenceNumberToStringFormat()
         {
+            int sequenceNumber;
+            return InputIsNumericValue(out sequenceNumber) ? CreateDelimiterTransformString(sequenceNumber) : "Need to enter numeric value!";
+        }
+
+        private string CreateDelimiterTransformString(int sequenceNumber)
+        {
             var transformString = "";
-            var sequenceNumber = 0;
-            if (InputIsNumericValue(out sequenceNumber))
+            if (sequenceNumber > 1)
             {
-                if (sequenceNumber > 1)
-                {
-                    transformString = "1,";
-                }
-                transformString += numericTransformer.Transform(sequenceNumber);
+                transformString = "1,";
             }
-            else
-            {
-                transformString = "Need to enter numeric value!";
-            }
+            transformString += numericTransformer.Transform(sequenceNumber);
             return transformString;
         }
 
