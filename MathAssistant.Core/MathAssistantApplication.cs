@@ -6,11 +6,13 @@ namespace MathAssistant.Core
     public class MathAssistantApplication
     {
         private readonly IConsole console;
+        private readonly NumericTransformer numericTransformer;
         private string lastInput;
 
         public MathAssistantApplication(IConsole console)
         {
             this.console = console;
+            this.numericTransformer = new NumericTransformer();
         }
 
         public void Start()
@@ -35,7 +37,6 @@ namespace MathAssistant.Core
         {
             var transformString = "";
             var sequenceNumber = 0;
-            var numericTransformer = new NumericTransformer();
             if (InputIsNumericValue(out sequenceNumber))
             {
                 if (sequenceNumber > 1)
