@@ -63,5 +63,14 @@ namespace MathAssistant.UnitTests
             VerifyOutput(expectedDisplayOutput);
             VerifyOutput("Enter Sequence Number:", 2);
         }
+
+        [Test]
+        public void EnterInput_WhenPreviousSubmittedSequenceNumber_RequestForAnotherSeqenceNumber()
+        {
+            MockEnteringInputValue("1");
+            MockEnteringInputValue("5");
+            application.Start();
+            VerifyOutput("Enter Sequence Number:", 3);
+        }
     }
 }
