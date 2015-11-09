@@ -1,15 +1,31 @@
 using System;
 using MathAssistant.Core.Interfaces;
+using MathAssistant.Core.TransformRules;
 
 namespace MathAssistant.Core
 {
+    public class MathAssistantApplicationFactory
+    {
+        private readonly IConsole console;
+
+        public MathAssistantApplicationFactory(IConsole console)
+        {
+            this.console = console;
+        }
+        public MathAssistantApplication Create()
+        {
+            INumericTransformer numericTransformer = new NumericTransformer(new FizzBuzzRule());
+            return new MathAssistantApplication(console, numericTransformer);
+        }
+    }
+
     public class MathAssistantApplication
     {
         private readonly IConsole console;
         private string lastInput;
         private readonly DelimiterTransformProcess delimeterTransformProcess;
 
-        public MathAssistantApplication(IConsole console, INumericTransformer numericTransformer)
+        internal MathAssistantApplication(IConsole console, INumericTransformer numericTransformer)
         {
             this.console = console;
             delimeterTransformProcess = new DelimiterTransformProcess(numericTransformer);

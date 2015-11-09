@@ -12,8 +12,7 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
     {
         private IConsole console;
         private MathAssistantApplication mathAssistantApplication;
-        private NumericTransformer numericTransformer;
-
+        
         private void EnterInputValue(string inputValue)
         {
             console.Stub(x => x.ReadLine()).Return(inputValue).Repeat.Once();
@@ -27,14 +26,15 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
         [BeforeScenario]
         public void BeforeScenario()
         {
-            console = MockRepository.GenerateMock<IConsole>();
-            numericTransformer = new NumericTransformer(new FizzBuzzRule());
+            console = MockRepository.GenerateMock<IConsole>(); 
         }
 
         [Given(@"I prompted to enter the total number of sequence numbers")]
         public void GivenIPromptedToEnterTheTotalNumberOfSequenceNumbers()
         {
-            mathAssistantApplication = new MathAssistantApplication(console, numericTransformer);
+              var applicationFactory = new MathAssistantApplicationFactory(console);
+           
+            mathAssistantApplication = applicationFactory.Create();
         }
         
         [When(@"I have entered in ""(.*)""")]

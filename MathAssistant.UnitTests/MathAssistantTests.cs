@@ -22,8 +22,8 @@ namespace MathAssistant.UnitTests
         {
             console = MockRepository.GenerateMock<IConsole>();
 
-            var numericTransformer = new NumericTransformer(new FizzBuzzRule());
-            application = new MathAssistantApplication(console, numericTransformer);
+            var applicationFactory = new MathAssistantApplicationFactory(console);
+            application = applicationFactory.Create();
         }
 
         private void MockEnteringInputValue(string inputValue)
