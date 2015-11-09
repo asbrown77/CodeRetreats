@@ -1,20 +1,20 @@
 using System;
-using System.Data.Odbc;
 using MathAssistant.Core.Interfaces;
+using MathAssistant.Core.TransformRules;
 
 namespace MathAssistant.Core
 {
     public class MathAssistantApplication
     {
         private readonly IConsole console;
-        private readonly NumericTransformer numericTransformer;
         private string lastInput;
         private readonly DelimiterTransformProcess delimeterTransforProcess;
 
         public MathAssistantApplication(IConsole console)
         {
             this.console = console;
-            this.delimeterTransforProcess = new DelimiterTransformProcess(new NumericTransformer());
+            var numericTransformer = new NumericTransformer(new FizzBuzzRule());
+            this.delimeterTransforProcess = new DelimiterTransformProcess(numericTransformer);
         }
 
         public void Start()

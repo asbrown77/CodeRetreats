@@ -1,4 +1,5 @@
 ﻿using MathAssistant.Core;
+using MathAssistant.Core.TransformRules;
 using NUnit.Framework;
 
 namespace MathAssistant.UnitTests
@@ -15,7 +16,7 @@ namespace MathAssistant.UnitTests
         [TestCase(15,"FizzBuzz")]
         public void Transform_WhenOne_ReturnStringOne(int number, string expectedString)
         {
-            var transformer = new NumericTransformer();
+            var transformer = new NumericTransformer(new FizzBuzzRule());
             var result = transformer.Transform(number);
             Assert.That(result, Is.EqualTo(expectedString));
         }

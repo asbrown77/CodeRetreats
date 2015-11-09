@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using MathAssistant.Core.Interfaces;
-using MathAssistant.Core.TransformRules;
 
 namespace MathAssistant.Core
 {
@@ -9,9 +8,9 @@ namespace MathAssistant.Core
     {
         private readonly IList<Func<int, string, string>> rules;
 
-        public NumericTransformer()
+        public NumericTransformer(ITransformRule transformRule)
         {
-            rules = new FizzBuzzRule().Rules;
+            rules = transformRule.Rules;
         }
 
         public string Transform(int number)
