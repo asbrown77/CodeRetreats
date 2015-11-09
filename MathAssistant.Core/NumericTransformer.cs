@@ -8,7 +8,7 @@
 
             if (IsFizz(number))
                 returnString = "Fizz";
-
+          
             return returnString;
         }
 
