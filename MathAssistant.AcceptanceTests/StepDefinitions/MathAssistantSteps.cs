@@ -63,9 +63,9 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
         }
 
         [Given(@"I have entered in ""(.*)""")]
-        public void GivenIHaveEnteredIn(int p0)
+        public void GivenIHaveEnteredIn(string inputValue)
         {
-            ScenarioContext.Current.Pending();
+            EnterInputValue(inputValue);
         }
     }
 }
