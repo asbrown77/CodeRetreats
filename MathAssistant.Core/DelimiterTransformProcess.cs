@@ -12,11 +12,15 @@ namespace MathAssistant.Core
         public string CreateTransformString(int sequenceNumber)
         {
             var transformString = "";
-            if (sequenceNumber > 1)
+            for (var number = 1; number <= sequenceNumber; number++)
             {
-                transformString = "1,";
+                if (number > 1)
+                {
+                    transformString += ",";
+                }
+                transformString += numericTransformer.Transform(number);
             }
-            transformString += numericTransformer.Transform(sequenceNumber);
+         
             return transformString;
         }
     }
