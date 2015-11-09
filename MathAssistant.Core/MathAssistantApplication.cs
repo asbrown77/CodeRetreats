@@ -1,4 +1,5 @@
 using System;
+using System.Data.Odbc;
 
 namespace MathAssistant.Core
 {
@@ -33,9 +34,9 @@ namespace MathAssistant.Core
         private string TransformInputSequenceNumberToStringFormat()
         {
             var transformString = "";
-            if (InputIsNumericValue())
+            var sequenceNumber = 0;
+            if (InputIsNumericValue(out sequenceNumber))
             {
-                // Add transformation
                 transformString = lastInput;
             }
             else
@@ -51,9 +52,8 @@ namespace MathAssistant.Core
             lastInput = console.ReadLine();
         }
 
-        private bool InputIsNumericValue()
+        private bool InputIsNumericValue(out int numericValue)
         {
-            int numericValue;
             return int.TryParse(lastInput, out numericValue);
         }
 
