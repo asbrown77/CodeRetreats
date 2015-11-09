@@ -19,7 +19,7 @@ namespace MathAssistant.Core
         {
             PromptForSequenceNumber();
 
-            if (!IsExitInputValue())
+            while (!IsExitInputValue())
             {
                 DisplayOutput(TransformInputSequenceNumberToStringFormat());
                 PromptForSequenceNumber();
