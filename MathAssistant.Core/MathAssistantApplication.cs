@@ -37,7 +37,11 @@ namespace MathAssistant.Core
             var sequenceNumber = 0;
             if (InputIsNumericValue(out sequenceNumber))
             {
-                transformString = lastInput;
+                if (sequenceNumber > 1)
+                {
+                    transformString = "1,";
+                }
+                transformString += lastInput;
             }
             else
             {
