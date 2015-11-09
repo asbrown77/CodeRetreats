@@ -62,5 +62,10 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
             VerifyOutput("Enter Sequence Number:", 2);
         }
 
+        [Given(@"I have entered in ""(.*)""")]
+        public void GivenIHaveEnteredIn(int p0)
+        {
+            ScenarioContext.Current.Pending();
+        }
     }
 }
