@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="IConsole.cs" />
     <Compile Include="MathAssistantApplication.cs" />
+    <Compile Include="NumericTransformer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

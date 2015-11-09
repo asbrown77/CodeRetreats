@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using MathAssistant.Core;
+using NUnit.Framework;
 
 namespace MathAssistant.UnitTests
 {
@@ -13,24 +14,6 @@ namespace MathAssistant.UnitTests
             var transformer = new NumericTransformer();
             var result = transformer.Transform(number);
             Assert.That(result, Is.EqualTo(expectedString));
-        }
-    }
-
-    public class NumericTransformer
-    {
-        public string Transform(int number)
-        {
-            string returnString = number.ToString(); ;
-
-            if (IsFizz(number))
-                returnString = "Fizz";
-
-            return returnString;
-        }
-
-        private static bool IsFizz(int number)
-        {
-            return number == 3;
         }
     }
 }
