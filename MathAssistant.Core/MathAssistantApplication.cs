@@ -7,12 +7,12 @@ namespace MathAssistant.Core
     {
         private readonly IConsole console;
         private string lastInput;
-        private readonly DelimiterTransformProcess delimeterTransforProcess;
+        private readonly DelimiterTransformProcess delimeterTransformProcess;
 
         public MathAssistantApplication(IConsole console, INumericTransformer numericTransformer)
         {
             this.console = console;
-            delimeterTransforProcess = new DelimiterTransformProcess(numericTransformer);
+            delimeterTransformProcess = new DelimiterTransformProcess(numericTransformer);
         }
 
         public void Start()
@@ -37,7 +37,7 @@ namespace MathAssistant.Core
         {
             int sequenceNumber;
             return InputIsNumericValue(out sequenceNumber) ? 
-                delimeterTransforProcess.CreateTransformString(sequenceNumber) 
+                delimeterTransformProcess.CreateTransformString(sequenceNumber) 
                 : "Need to enter numeric value!";
         }
 
