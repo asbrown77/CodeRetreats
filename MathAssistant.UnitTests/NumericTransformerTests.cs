@@ -10,6 +10,7 @@ namespace MathAssistant.UnitTests
         [TestCase(2,"2")]
         [TestCase(3,"Fizz")]
         [TestCase(5,"Buzz")]
+        [TestCase(6,"Fizz")]
         public void Transform_WhenOne_ReturnStringOne(int number, string expectedString)
         {
             var transformer = new NumericTransformer();

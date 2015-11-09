@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MathAssistant.Core
 {
@@ -6,17 +7,15 @@ namespace MathAssistant.Core
     {
         public string Transform(int number)
         {
-            var returnString = String.Empty; 
+            var returnString = String.Empty;
 
             returnString = FizzRule(number, returnString);
             returnString = BuzzRule(number, returnString);
-            if (String.IsNullOrEmpty(returnString))
-            {
-                returnString = number.ToString();  
-            }
+            returnString = DefaultRule(number, returnString);
+
             return returnString;
         }
-
+       
         private static string BuzzRule(int number, string returnString)
         {
             if (IsBuzz(number))
@@ -42,5 +41,15 @@ namespace MathAssistant.Core
         {
             return number == 3;
         }
+
+        private static string DefaultRule(int number, string returnString)
+        {
+            if (String.IsNullOrEmpty(returnString))
+            {
+                returnString = number.ToString();
+            }
+            return returnString;
+        }
+
     }
 }
