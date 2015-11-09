@@ -23,7 +23,7 @@ namespace MathAssistant.UnitTests
     {
         public string Transform(int number)
         {
-            return null;
+            return "1";
         }
     }
 }
