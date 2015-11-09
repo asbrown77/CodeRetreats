@@ -1,4 +1,4 @@
-﻿namespace MathAssistant.Core
+﻿namespace MathAssistant.Core.Interfaces
 {
     public interface INumericTransformer
     {

@@ -1,3 +1,5 @@
+using MathAssistant.Core.Interfaces;
+
 namespace MathAssistant.Core
 {
     public class DelimiterTransformProcess

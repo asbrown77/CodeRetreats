@@ -1,5 +1,6 @@
 using System;
 using System.Data.Odbc;
+using MathAssistant.Core.Interfaces;
 
 namespace MathAssistant.Core
 {

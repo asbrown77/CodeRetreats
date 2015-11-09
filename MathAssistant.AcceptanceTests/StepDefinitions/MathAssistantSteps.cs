@@ -1,5 +1,6 @@
 ﻿using System;
 using MathAssistant.Core;
+using MathAssistant.Core.Interfaces;
 using Rhino.Mocks;
 using TechTalk.SpecFlow;
 

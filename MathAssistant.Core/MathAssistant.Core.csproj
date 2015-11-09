@@ -40,8 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DelimiterTransformProcess.cs" />
-    <Compile Include="IConsole.cs" />
-    <Compile Include="INumericTransformer.cs" />
+    <Compile Include="TransformRules\FizzBuzzRule.cs" />
+    <Compile Include="Interfaces\IConsole.cs" />
+    <Compile Include="Interfaces\INumericTransformer.cs" />
+    <Compile Include="Interfaces\ITransformRule.cs" />
     <Compile Include="MathAssistantApplication.cs" />
     <Compile Include="NumericTransformer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,4 +1,5 @@
 ﻿using MathAssistant.Core;
+using MathAssistant.Core.Interfaces;
 using NUnit.Framework;
 using Rhino.Mocks;
 
