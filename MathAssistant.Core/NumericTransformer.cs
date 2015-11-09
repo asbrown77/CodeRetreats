@@ -20,7 +20,7 @@ namespace MathAssistant.Core
         {
             if (IsBuzz(number))
             {
-                returnString = "Buzz";
+                returnString += "Buzz";
             }
             return returnString;
         }
