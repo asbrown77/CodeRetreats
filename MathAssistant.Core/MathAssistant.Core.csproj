@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DelimeterTransformProcess.cs" />
+    <Compile Include="DelimiterTransformProcess.cs" />
     <Compile Include="IConsole.cs" />
     <Compile Include="MathAssistantApplication.cs" />
     <Compile Include="NumericTransformer.cs" />

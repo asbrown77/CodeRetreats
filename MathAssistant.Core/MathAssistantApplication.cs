@@ -8,12 +8,12 @@ namespace MathAssistant.Core
         private readonly IConsole console;
         private readonly NumericTransformer numericTransformer;
         private string lastInput;
-        private readonly DelimeterTransformProcess delimeterTransforProcess;
+        private readonly DelimiterTransformProcess delimeterTransforProcess;
 
         public MathAssistantApplication(IConsole console)
         {
             this.console = console;
-            this.delimeterTransforProcess = new DelimeterTransformProcess(new NumericTransformer());
+            this.delimeterTransforProcess = new DelimiterTransformProcess(new NumericTransformer());
         }
 
         public void Start()

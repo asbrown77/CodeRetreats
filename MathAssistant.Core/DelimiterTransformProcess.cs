@@ -1,10 +1,10 @@
 namespace MathAssistant.Core
 {
-    public class DelimeterTransformProcess
+    public class DelimiterTransformProcess
     {
         private readonly NumericTransformer numericTransformer;
 
-        public DelimeterTransformProcess(NumericTransformer numericTransformer)
+        public DelimiterTransformProcess(NumericTransformer numericTransformer)
         {
             this.numericTransformer = numericTransformer;
         }
