@@ -3,7 +3,7 @@
 namespace MathAssistant.UnitTests
 {
     [TestFixture]
-    public class DelimiterTransformProcess
+    public class DelimiterTransformProcessTests
     {
         [Test]
         public void UnitOfWork_Scenario_ExpectedBehaviour()
