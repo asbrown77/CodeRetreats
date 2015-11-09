@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace MathAssistant.UnitTests
 {
@@ -12,6 +7,7 @@ namespace MathAssistant.UnitTests
     {
         [TestCase(1,"1")]
         [TestCase(2,"2")]
+        [TestCase(3,"Fizz")]
         public void Transform_WhenOne_ReturnStringOne(int number, string expectedString)
         {
             var transformer = new NumericTransformer();

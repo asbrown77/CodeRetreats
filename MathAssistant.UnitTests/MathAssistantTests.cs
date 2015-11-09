@@ -52,7 +52,7 @@ namespace MathAssistant.UnitTests
 
         [TestCase("1", "1")]
         [TestCase("2", "1,2")]
-        [TestCase("3", "1,2,Fuzz")]
+        [TestCase("3", "1,2,Fizz")]
         [TestCase("x", "Need to enter numeric value!")]
         [TestCase("xy", "Need to enter numeric value!")]
         public void EnterInput_WhenStartedAndInputValue_DisplayTheExpectedOutput(string inputValue, string expectedDisplayOutput)
