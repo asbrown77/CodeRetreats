@@ -5,16 +5,21 @@ namespace MathAssistant.Core
 {
     public class NumericTransformer : INumericTransformer
     {
-        public string Transform(int number)
-        {
-            var returnString = String.Empty;
+        private List<Func<int, string, string>> rules;
 
-            var rules = new List<Func<int, string, string>>
+        public NumericTransformer()
+        {
+            rules = new List<Func<int, string, string>>
             {
                 FizzRule,
                 BuzzRule,
                 DefaultRule
-            };
+            };    
+        }
+
+        public string Transform(int number)
+        {
+            var returnString = String.Empty;
 
             foreach (var rule in rules)
             {
