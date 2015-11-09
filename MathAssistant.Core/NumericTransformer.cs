@@ -34,7 +34,7 @@ namespace MathAssistant.Core
 
         private static bool IsBuzz(int number)
         {
-            return number == 5;
+            return number % 5 ==0;
         }
 
         private static bool IsFizz(int number)
