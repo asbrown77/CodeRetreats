@@ -24,6 +24,7 @@ namespace MathAssistant.UnitTests
         [TestCase(1, "1")]
         [TestCase(2, "2")]
         [TestCase(5, "Monkey")]
+        [TestCase(10, "Monkey")]
         public void Transform_WhenNumberAndMonkeyRule_ReturnExpectedString(int number, string expectedString)
         {
             var transformer = new NumericTransformer(new MonkeyRule());
