@@ -68,6 +68,14 @@ namespace MathAssistant.AcceptanceTests.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 8
+#line 9
+ testRunner.Given("I have Transformation Rule of \"FizzBuzz\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Quit Application on empty input or zero")]
         [NUnit.Framework.TestCaseAttribute("0", null)]
@@ -75,13 +83,15 @@ namespace MathAssistant.AcceptanceTests.Features
         public virtual void QuitApplicationOnEmptyInputOrZero(string input, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Quit Application on empty input or zero", exampleTags);
-#line 8
-this.ScenarioSetup(scenarioInfo);
-#line 9
- testRunner.Given("I prompted to enter the total number of sequence numbers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 10
- testRunner.When(string.Format("I have entered in \"{0}\"", input), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
+this.ScenarioSetup(scenarioInfo);
+#line 8
+this.FeatureBackground();
+#line 12
+ testRunner.Given("I prompted to enter the total number of sequence numbers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 13
+ testRunner.When(string.Format("I have entered in \"{0}\"", input), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 14
  testRunner.Then("should exit application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -92,15 +102,17 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void InputANonNumericValue()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Input a non numeric value", ((string[])(null)));
-#line 17
-this.ScenarioSetup(scenarioInfo);
-#line 18
- testRunner.Given("I prompted to enter the total number of sequence numbers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 19
- testRunner.When("I have entered in \"xy\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
- testRunner.Then("I should display \"Need to enter numeric value!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
+#line 8
+this.FeatureBackground();
 #line 21
+ testRunner.Given("I prompted to enter the total number of sequence numbers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 22
+ testRunner.When("I have entered in \"xy\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 23
+ testRunner.Then("I should display \"Need to enter numeric value!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 24
  testRunner.And("I should prompted to enter another sequence number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -114,15 +126,17 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void InputSequenceNumberGreaterThanZero(string input, string output, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Input sequence number greater than zero", exampleTags);
-#line 23
-this.ScenarioSetup(scenarioInfo);
-#line 24
- testRunner.Given("I prompted to enter the total number of sequence numbers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 25
- testRunner.When(string.Format("I have entered in \"{0}\"", input), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 26
- testRunner.Then(string.Format("I should display \"{0}\"", output), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
+#line 8
+this.FeatureBackground();
 #line 27
+ testRunner.Given("I prompted to enter the total number of sequence numbers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 28
+ testRunner.When(string.Format("I have entered in \"{0}\"", input), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 29
+ testRunner.Then(string.Format("I should display \"{0}\"", output), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 30
  testRunner.And("I should prompted to enter another sequence number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -133,15 +147,17 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ContinueEnteringSequenceNumberGreaterThanZeroAndThenExit()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Continue entering sequence number greater than zero and then exit", ((string[])(null)));
-#line 34
-this.ScenarioSetup(scenarioInfo);
-#line 35
- testRunner.Given("I prompted to enter the total number of sequence numbers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 36
- testRunner.And("I have entered in \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 37
- testRunner.When("I have entered in \"5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioSetup(scenarioInfo);
+#line 8
+this.FeatureBackground();
 #line 38
+ testRunner.Given("I prompted to enter the total number of sequence numbers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 39
+ testRunner.And("I have entered in \"1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 40
+ testRunner.When("I have entered in \"5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 41
  testRunner.Then("I should display \"1,2,Fizz,4,Buzz\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
