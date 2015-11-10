@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using MathAssistant.AcceptanceTests.Helpers;
 using MathAssistant.Core;
 using MathAssistant.Core.Interfaces;
 using MathAssistant.Core.TransformRules;
@@ -13,7 +14,7 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
     {
         private IConsole console;
         private MathAssistantApplication mathAssistantApplication;
-        private string ruleType;
+        private RuleEnum ruleType;
 
         private void EnterInputValue(string inputValue)
         {
@@ -34,7 +35,7 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
         [Given(@"I have Transformation Rule of ""(.*)""")]
         public void GivenIHaveTransformationRuleOf(string ruleType)
         {
-            this.ruleType = ruleType;
+            this.ruleType = Util.ParseEnum<RuleEnum>(ruleType);
         }
 
         [Given(@"I prompted to enter the total number of sequence numbers")]
@@ -42,7 +43,7 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
         {
             var applicationFactory = new MathAssistantApplicationFactory(console);
            
-            mathAssistantApplication = applicationFactory.Create(new FizzBuzzRule());
+            mathAssistantApplication = applicationFactory.Create(ruleType);
         }
 
         [Given(@"I have entered in ""(.*)""")]
