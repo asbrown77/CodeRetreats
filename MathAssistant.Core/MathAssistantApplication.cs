@@ -21,7 +21,7 @@ namespace MathAssistant.Core
 
         public ITransformRule Create(RuleEnum fizzBuzz)
         {
-            return null;
+            return new FizzBuzzRule();
         }
     }
 
