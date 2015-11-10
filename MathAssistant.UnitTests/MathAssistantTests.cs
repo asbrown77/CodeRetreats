@@ -1,5 +1,6 @@
 ﻿using MathAssistant.Core;
 using MathAssistant.Core.Interfaces;
+using MathAssistant.Core.TransformRules;
 using NUnit.Framework;
 using Rhino.Mocks;
 
@@ -8,15 +9,9 @@ namespace MathAssistant.UnitTests
     [TestFixture]
     public class MathAssistantTests
     {
-        public MathAssistantTests(string ruleType1)
-        {
-            ruleType = ruleType;
-        }
-
         private IConsole console;
         private MathAssistantApplication application;
-        private string ruleType;
-
+       
         private void VerifyOutput(string value, int numberOfTimes = 1)
         {
             console.AssertWasCalled(x => x.WriteLine(value), option => option.Repeat.Times(numberOfTimes));
@@ -28,7 +23,7 @@ namespace MathAssistant.UnitTests
             console = MockRepository.GenerateMock<IConsole>();
 
             var applicationFactory = new MathAssistantApplicationFactory(console);
-            application = applicationFactory.Create(MockRepository.GenerateStub<ITransformRule>());
+            application = applicationFactory.Create(new FizzBuzzRule());
         }
 
         private void MockEnteringInputValue(string inputValue)

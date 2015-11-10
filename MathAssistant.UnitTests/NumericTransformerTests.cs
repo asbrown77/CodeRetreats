@@ -14,7 +14,7 @@ namespace MathAssistant.UnitTests
         [TestCase(6,"Fizz")]
         [TestCase(10,"Buzz")]
         [TestCase(15,"FizzBuzz")]
-        public void Transform_WhenOne_ReturnStringOne(int number, string expectedString)
+        public void Transform_WhenNumberAndFizzBuzzRule_ReturnExpectedString(int number, string expectedString)
         {
             var transformer = new NumericTransformer(new FizzBuzzRule());
             var result = transformer.Transform(number);
