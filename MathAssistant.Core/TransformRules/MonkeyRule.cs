@@ -8,5 +8,16 @@ namespace MathAssistant.Core.TransformRules
     {
         public IList<Func<int, string, string>> Rules { get; private set; }
 
+        public MonkeyRule()
+        {
+            Rules = new List<Func<int, string, string>>
+            {
+                (n, s) =>
+                {
+                    return n.ToString();
+                }
+            };
+        }
+
     }
 }
