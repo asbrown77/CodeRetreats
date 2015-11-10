@@ -14,7 +14,7 @@ namespace MathAssistant.Core.TransformRules
             {
                 (n, s) =>
                 {
-                    return n.ToString();
+                    return "1";
                 }
             };
         }
