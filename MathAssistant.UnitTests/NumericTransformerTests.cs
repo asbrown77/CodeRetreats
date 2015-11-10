@@ -20,5 +20,13 @@ namespace MathAssistant.UnitTests
             var result = transformer.Transform(number);
             Assert.That(result, Is.EqualTo(expectedString));
         }
+
+        [TestCase(1, "1")]
+        public void Transform_WhenNumberAndMonkeyRule_ReturnExpectedString(int number, string expectedString)
+        {
+            var transformer = new NumericTransformer(new MonkeyRule());
+            var result = transformer.Transform(number);
+            Assert.That(result, Is.EqualTo(expectedString));
+        }
     }
 }
