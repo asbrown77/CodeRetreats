@@ -1,6 +1,5 @@
 ﻿using MathAssistant.Core;
 using MathAssistant.Core.Interfaces;
-using MathAssistant.Core.TransformRules;
 using NUnit.Framework;
 using Rhino.Mocks;
 
