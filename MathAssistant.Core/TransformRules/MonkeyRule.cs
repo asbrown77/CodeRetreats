@@ -12,23 +12,29 @@ namespace MathAssistant.Core.TransformRules
         {
             Rules = new List<Func<int, string, string>>
             {
-                (n, s) =>
-                {
-                    if (n == 5)
-                    {
-                        return "Monkey";
-                    }
-
-                    return s;
-                },
-                (n, s) =>
-                {
-                    if(String.IsNullOrEmpty(s))
-                        return n.ToString();
-                    return s;
-                }
+                MonkeyStandardRule,
+                Default
             };
         }
 
+        private string MonkeyStandardRule(int number, string returnString)
+        {
+            if (IsMonkey(number))
+            {
+                return "Monkey";
+            }
+
+            return returnString;
+        }
+
+        private static bool IsMonkey(int n)
+        {
+            return n == 5;
+        }
+
+        private string Default(int number, string returnString)
+        {
+            return String.IsNullOrEmpty(returnString) ? number.ToString() : returnString;
+        }
     }
 }
