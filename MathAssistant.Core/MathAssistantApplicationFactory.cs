@@ -23,7 +23,7 @@ namespace MathAssistant.Core
 
         public MathAssistantApplication Create(RuleEnum ruleType)
         {
-            var transformRule = new FizzBuzzRule();
+            ITransformRule transformRule = new FizzBuzzRule();
             if (ruleType == RuleEnum.Monkey)
             {
                 transformRule = new MonkeyRule();
