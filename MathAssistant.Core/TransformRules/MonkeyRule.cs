@@ -14,7 +14,18 @@ namespace MathAssistant.Core.TransformRules
             {
                 (n, s) =>
                 {
-                    return n.ToString();
+                    if (n == 5)
+                    {
+                        return "Monkey";
+                    }
+
+                    return s;
+                },
+                (n, s) =>
+                {
+                    if(String.IsNullOrEmpty(s))
+                        return n.ToString();
+                    return s;
                 }
             };
         }
