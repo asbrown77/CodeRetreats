@@ -29,7 +29,7 @@ namespace MathAssistant.Core.TransformRules
 
         private static bool IsMonkey(int n)
         {
-            return n == 5;
+            return n % 5 == 0;
         }
 
         private string Default(int number, string returnString)
