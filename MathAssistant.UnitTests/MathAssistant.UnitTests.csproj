@@ -50,6 +50,7 @@
     <Compile Include="DelimiterTransformProcessTests.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MathAssistantApplicationFactoryTests.cs" />
     <Compile Include="MathAssistantTests.cs" />
     <Compile Include="NumericTransformerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

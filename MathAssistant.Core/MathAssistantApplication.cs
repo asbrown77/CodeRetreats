@@ -12,10 +12,16 @@ namespace MathAssistant.Core
         {
             this.console = console;
         }
-        public MathAssistantApplication Create()
+        
+        public MathAssistantApplication Create(ITransformRule rule)
         {
-            INumericTransformer numericTransformer = new NumericTransformer(new FizzBuzzRule());
+            INumericTransformer numericTransformer = new NumericTransformer(rule);
             return new MathAssistantApplication(console, numericTransformer);
+        }
+
+        public ITransformRule Create(RuleEnum fizzBuzz)
+        {
+            return null;
         }
     }
 

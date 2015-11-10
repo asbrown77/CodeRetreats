@@ -8,8 +8,14 @@ namespace MathAssistant.UnitTests
     [TestFixture]
     public class MathAssistantTests
     {
+        public MathAssistantTests(string ruleType1)
+        {
+            ruleType = ruleType;
+        }
+
         private IConsole console;
         private MathAssistantApplication application;
+        private string ruleType;
 
         private void VerifyOutput(string value, int numberOfTimes = 1)
         {
@@ -22,7 +28,7 @@ namespace MathAssistant.UnitTests
             console = MockRepository.GenerateMock<IConsole>();
 
             var applicationFactory = new MathAssistantApplicationFactory(console);
-            application = applicationFactory.Create();
+            application = applicationFactory.Create(MockRepository.GenerateStub<ITransformRule>());
         }
 
         private void MockEnteringInputValue(string inputValue)

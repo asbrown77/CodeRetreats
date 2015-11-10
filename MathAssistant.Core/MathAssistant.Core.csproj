@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DelimiterTransformProcess.cs" />
+    <Compile Include="RuleEnum.cs" />
+    <Compile Include="TransformRules\MonkeyRule.cs" />
     <Compile Include="TransformRules\FizzBuzzRule.cs" />
     <Compile Include="Interfaces\IConsole.cs" />
     <Compile Include="Interfaces\INumericTransformer.cs" />

@@ -1,5 +1,6 @@
 ﻿
 using MathAssistant.Core;
+using MathAssistant.Core.TransformRules;
 
 namespace MathAssistant.Console
 {
@@ -8,7 +9,7 @@ namespace MathAssistant.Console
         static void Main(string[] args)
         {
             var console = new ConsoleWrapper();
-            var application = new MathAssistantApplicationFactory(console).Create();
+            var application = new MathAssistantApplicationFactory(console).Create(new FizzBuzzRule());
             application.Start();
         }
     }
