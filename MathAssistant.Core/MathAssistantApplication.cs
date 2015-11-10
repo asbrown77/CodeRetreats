@@ -1,30 +1,8 @@
 using System;
 using MathAssistant.Core.Interfaces;
-using MathAssistant.Core.TransformRules;
 
 namespace MathAssistant.Core
 {
-    public class MathAssistantApplicationFactory
-    {
-        private readonly IConsole console;
-
-        public MathAssistantApplicationFactory(IConsole console)
-        {
-            this.console = console;
-        }
-        
-        public MathAssistantApplication Create(ITransformRule rule)
-        {
-            INumericTransformer numericTransformer = new NumericTransformer(rule);
-            return new MathAssistantApplication(console, numericTransformer);
-        }
-
-        public ITransformRule Create(RuleEnum fizzBuzz)
-        {
-            return new FizzBuzzRule();
-        }
-    }
-
     public class MathAssistantApplication
     {
         private readonly IConsole console;

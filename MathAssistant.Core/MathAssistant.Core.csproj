@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DelimiterTransformProcess.cs" />
+    <Compile Include="MathAssistantApplicationFactory.cs" />
     <Compile Include="RuleEnum.cs" />
     <Compile Include="TransformRules\MonkeyRule.cs" />
     <Compile Include="TransformRules\FizzBuzzRule.cs" />
