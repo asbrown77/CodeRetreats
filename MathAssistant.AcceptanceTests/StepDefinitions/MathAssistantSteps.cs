@@ -29,14 +29,25 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
             console = MockRepository.GenerateMock<IConsole>(); 
         }
 
+        [Given(@"I have Transformation Rule of ""(.*)""")]
+        public void GivenIHaveTransformationRuleOf(string ruleType)
+        {
+        }
+
         [Given(@"I prompted to enter the total number of sequence numbers")]
         public void GivenIPromptedToEnterTheTotalNumberOfSequenceNumbers()
         {
-              var applicationFactory = new MathAssistantApplicationFactory(console);
+            var applicationFactory = new MathAssistantApplicationFactory(console);
            
             mathAssistantApplication = applicationFactory.Create();
         }
-        
+
+        [Given(@"I have entered in ""(.*)""")]
+        public void GivenIHaveEnteredIn(string inputValue)
+        {
+            EnterInputValue(inputValue);
+        }
+
         [When(@"I have entered in ""(.*)""")]
         public void WhenIHaveEnteredIn(string inputValue)
         {
@@ -60,12 +71,6 @@ namespace MathAssistant.AcceptanceTests.StepDefinitions
         public void ThenIShouldPromptedToEnterAnotherSequenceNumber()
         {
             VerifyOutput("Enter Sequence Number:", 2);
-        }
-
-        [Given(@"I have entered in ""(.*)""")]
-        public void GivenIHaveEnteredIn(string inputValue)
-        {
-            EnterInputValue(inputValue);
         }
     }
 }
